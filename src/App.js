@@ -1,10 +1,7 @@
 import React, {useState} from "react";
 import './styles/App.css'
-import PostList from "./components/functional_component/PostList";
-import NameForm from "./components/functional_component/NameForm";
-import EssayForm from "./components/functional_component/EssayForm";
-import ClassFlavorForm from "./components/class_compinents/ClassFlavorForm";
-import FlavorForm from "./components/functional_component/FlavorForm";
+import ClassReservation from "./components/class_compinents/ClassReservation";
+import BoilingCalculator from "./components/functional_component/BoilingCalculator";
 
 function App() {
     const [posts, setPost] = useState([
@@ -15,6 +12,8 @@ function App() {
     ])
   return (
       <div>
+          <BoilingCalculator />
+          {/*<ClassReservation />*/}
           {/*<NameForm />*/}
           {/*<EssayForm />*/}
           {/*<ClassFlavorForm />*/}
