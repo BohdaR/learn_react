@@ -1,6 +1,10 @@
 import React, {useState} from "react";
 import './styles/App.css'
-import PostList from "./components/PostList";
+import PostList from "./components/functional_component/PostList";
+import NameForm from "./components/functional_component/NameForm";
+import EssayForm from "./components/functional_component/EssayForm";
+import ClassFlavorForm from "./components/class_compinents/ClassFlavorForm";
+import FlavorForm from "./components/functional_component/FlavorForm";
 
 function App() {
     const [posts, setPost] = useState([
@@ -9,25 +13,13 @@ function App() {
         {id: 3, title: 'Ruby', text: 'Ruby programing language!'},
         {id: 4, title: 'C++', text: 'C++ programing language!'},
     ])
-    const [title, setTitle] = useState('Your title')
-
-    const addNewPost = (e) => {
-        e.preventDefault()
-        console.log(title)
-    }
   return (
       <div>
-          <form>
-              <input
-                  type="text"
-                  placeholder="Назва"
-                  value={title}
-                  onChange={e => setTitle(e.target.value)}
-              />
-              <input type="text" placeholder="Опис"/>
-              <button onClick={addNewPost}>Create post</button>
-          </form>
-          <PostList posts={posts} title={'Lang list'} />
+          {/*<NameForm />*/}
+          {/*<EssayForm />*/}
+          {/*<ClassFlavorForm />*/}
+          {/*<FlavorForm flavors={["Rose", "Carnation", "lime"]} />*/}
+          {/*<PostList posts={posts} title={'Lang list'} />*/}
       </div>
   );
 }
